@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор расхода руды</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 800px;
+        }
+        .skill {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .skill input, .skill select {
+            margin-bottom: 5px;
+            display: block;
+            width: 100%;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Калькулятор расхода руды</h1>
+    <label>
+        Откат умений персонажа (%):
+        <input type="number" id="cooldownModifier" value="0" min="0" max="100">
+    </label>
+    <div id="skillsContainer"></div>
+    <button id="addSkill">Добавить умение</button>
+    <button id="calculate">Рассчитать</button>
+    <h2>Общий расход руды: <span id="totalOre">0</span></h2>
+    <h3>Баффы с долгим откатом: <span id="longCooldownBuffs">0</span></h3>
+    <script src="script.js"></script>
+</body>
+</html>
