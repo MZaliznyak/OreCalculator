@@ -44,7 +44,7 @@ function calculateOre() {
     skills.forEach(skill => {
         const type = skill.querySelector('.skillType').value;
         const duration = parseFloat(skill.querySelector('.skillDuration').value) || 0;
-      //  const cooldown = parseFloat(skill.querySelector('.skillCooldown').value) || 0;
+        const cooldown = parseFloat(skill.querySelector('.skillCooldown').value) || 0;
         const orePerUse = parseFloat(skill.querySelector('.skillOre').value) || 0;
 
         if (type === 'buff') {
