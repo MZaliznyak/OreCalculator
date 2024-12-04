@@ -19,6 +19,10 @@ function addSkill() {
                 <input type="number" class="skillDuration" value="0" min="0">
             </label>
         </div>
+		      <label>
+            Откат (секунды):
+            <input type="number" class="skillCooldown" value="0" min="0">
+        </label>
         <label>
             Количество руды за использование:
             <input type="number" class="skillOre" value="0" min="0">
