@@ -9,20 +9,16 @@ function addSkill() {
         <label>
             Тип умения:
             <select class="skillType">
-                <option value="buff">Бафф</option>
-                <option value="combat">Боевой</option>
+                <option value="buff">Бафф или скилл с фиксированным откатом</option>
+                <option value="combat">Боевой без фиксированного отката</option>
             </select>
         </label>
         <div class="buffFields">
             <label>
-                Время действия (секунды):
+                Откат применения скила (секунды):
                 <input type="number" class="skillDuration" value="0" min="0">
             </label>
         </div>
-        <label>
-            Откат (секунды):
-            <input type="number" class="skillCooldown" value="0" min="0">
-        </label>
         <label>
             Количество руды за использование:
             <input type="number" class="skillOre" value="0" min="0">
@@ -48,7 +44,7 @@ function calculateOre() {
     skills.forEach(skill => {
         const type = skill.querySelector('.skillType').value;
         const duration = parseFloat(skill.querySelector('.skillDuration').value) || 0;
-        const cooldown = parseFloat(skill.querySelector('.skillCooldown').value) || 0;
+      //  const cooldown = parseFloat(skill.querySelector('.skillCooldown').value) || 0;
         const orePerUse = parseFloat(skill.querySelector('.skillOre').value) || 0;
 
         if (type === 'buff') {
