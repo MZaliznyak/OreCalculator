@@ -15,7 +15,7 @@ function addSkill() {
         </label>
         <div class="buffFields">
             <label>
-                Время действия (минуты):
+                Время действия (секунды):
                 <input type="number" class="skillDuration" value="0" min="0">
             </label>
         </div>
@@ -53,7 +53,7 @@ function calculateOre() {
 
         if (type === 'buff') {
                 // Расход руды для обычных баффов
-                totalOre += ((60 / duration) * orePerUse) * 24;
+                totalOre += ((3600 / duration) * orePerUse) * 24;
             }
         } else if (type === 'combat') {
             // Расход руды для боевых умений
