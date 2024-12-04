@@ -54,7 +54,7 @@ function calculateOre() {
         if (type === 'buff') {
                 // Расход руды для обычных баффов
                 totalOre += ((3600 / duration) * orePerUse) * 24;
-            }
+            
         } else if (type === 'combat') {
             // Расход руды для боевых умений
             const realCooldown = cooldown * (1 - cooldownModifier / 100);
