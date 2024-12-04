@@ -52,10 +52,6 @@ function calculateOre() {
         const orePerUse = parseFloat(skill.querySelector('.skillOre').value) || 0;
 
         if (type === 'buff') {
-            if (cooldown > duration * 60) {
-                // Баффы с долгим откатом
-                longCooldownBuffs += 1;
-            } else {
                 // Расход руды для обычных баффов
                 totalOre += ((60 / duration) * orePerUse) * 24;
             }
@@ -67,5 +63,4 @@ function calculateOre() {
     });
 
     document.getElementById('totalOre').textContent = totalOre.toFixed(2);
-    document.getElementById('longCooldownBuffs').textContent = longCooldownBuffs;
 }
